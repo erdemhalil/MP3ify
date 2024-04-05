@@ -8,12 +8,12 @@ def similarity_ratio(s1: str, s2: str) -> float:
     """
     Calculates the similarity ratio between two strings.
 
-    Parameters:
-    s1 (str): The first string.
-    s2 (str): The second string.
+    Args:
+        s1 (str): The first string.
+        s2 (str): The second string.
 
     Returns:
-    float: The similarity ratio between the two strings.
+        float: The similarity ratio between the two strings.
     """
     return difflib.SequenceMatcher(None, s1.lower(), s2.lower()).ratio()
 
@@ -33,10 +33,10 @@ def authenticate(client_id: str, client_secret: str, redirect_uri: str = 'http:/
     """
     Authenticates the client with the Spotify API using the provided client ID, client secret, and redirect URI.
 
-    Parameters:
-    - client_id (str): The client ID obtained from the Spotify Developer Dashboard.
-    - client_secret (str): The client secret obtained from the Spotify Developer Dashboard.
-    - redirect_uri (str): The URI to redirect the user after authentication. Defaults to 'http://localhost:6060'.
+    Args:
+        client_id (str): The client ID obtained from the Spotify Developer Dashboard.
+        client_secret (str): The client secret obtained from the Spotify Developer Dashboard.
+        redirect_uri (str): The URI to redirect the user after authentication. Defaults to 'http://localhost:6060'.
 
     Returns:
         SpotifyOAuth: An instance of the SpotifyOAuth class for further API interactions.

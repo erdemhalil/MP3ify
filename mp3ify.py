@@ -57,7 +57,11 @@ def get_info_tracks(liked_songs: dict) -> list:
     return tracks
 
 
-def search_single_track(result, track_info, duration_tolerance, title_similarity_threshold, artist_similarity_threshold) -> Tuple[str, float, float]:
+def search_single_track(result, track_info, 
+                        duration_tolerance, 
+                        title_similarity_threshold, 
+                        artist_similarity_threshold
+                        ) -> Tuple[str, float, float]:
     """
     Searches for a single track based on the given result and track_info.
 
@@ -115,7 +119,7 @@ def search_youtube_single_track(track_info: dict,
         artist_similarity_threshold (float, optional): The threshold for the similarity ratio between the track artist and the search results. Defaults to 0.4.
 
     Returns:
-        Tuple[str, str]: A tuple containing the YouTube URL of the best match and the full title of the track.
+        tuple: A tuple containing the YouTube URL of the best match and the full title of the track.
 
     Raises:
         RuntimeError: If there is an error searching YouTube.
@@ -157,6 +161,9 @@ def download_track(track: dict, failed_tracks: list) -> None:
     Args:
         track (dict): A dictionary containing information about the track.
         failed_tracks (list): A concurrent list to store the titles of tracks that failed to download.
+    
+    Returns:
+        None
     """
     url, title = search_youtube_single_track(track)
     
