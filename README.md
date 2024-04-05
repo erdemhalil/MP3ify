@@ -7,6 +7,7 @@ MP3ify is a Python script that allows you to download your liked songs from Spot
 - Python 3.8+
 - `pip` package manager
 - Spotify Developer account
+- [`ffmpeg`](https://ffmpeg.org/download.html)
 
 
 ### Installation:
