@@ -1,12 +1,13 @@
 # MP3ify
 
-MP3ify is a Python script that allows you to download your liked songs from Spotify as MP3 files. It uses the Spotify API to retrieve information about your liked songs and then searches for corresponding tracks on YouTube. The script then downloads the audio of multiple songs at a time and saves them as an MP3 file.
+MP3ify is a Python script that allows you to download your liked songs from Spotify as MP3 files. It uses the Spotify API to retrieve information about your liked songs and then searches for corresponding tracks on YouTube. The program then downloads the audio of multiple songs at a time and saves them as MP3 files.
 
 
 ### Prerequisites:
 - Python 3.8+
 - `pip` package manager
 - Spotify Developer account
+- [`ffmpeg`](https://ffmpeg.org/download.html)
 
 
 ### Installation:
