@@ -181,7 +181,7 @@ def download_track(track: dict, failed_tracks: list) -> None:
             'preferredcodec': 'mp3',
             'preferredquality': '320'
         }],
-        'outtmpl': os.path.join(utils.format_download_dir(), title)
+        'outtmpl': os.path.join(utils.format_download_dir(), title.replace(":", ""))
     }
 
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
