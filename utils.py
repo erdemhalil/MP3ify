@@ -87,7 +87,10 @@ def process_yt_title(yt_title: str):
     """
     left_artists, right_artists = [], []
     title = None
-    left_side, right_side = yt_title.split(" - ", maxsplit=1)
+    try:
+        left_side, right_side = yt_title.split(" - ", maxsplit=1)
+    except ValueError:  # Handle cases where there is no ' - ' in the title
+        left_side, right_side = yt_title, ""
 
     feat_strings = [" feat.", " ft.", "(feat.", "(ft."]
     for feat_string in feat_strings:

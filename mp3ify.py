@@ -181,7 +181,9 @@ def download_track(track: dict, failed_tracks: list) -> None:
             'preferredcodec': 'mp3',
             'preferredquality': '320'
         }],
-        'outtmpl': os.path.join(utils.format_download_dir(), title.replace(":", ""))
+        'outtmpl': os.path.join(utils.format_download_dir(), 
+                                title.replace(":", "")  # Windows does not allow certain characters in filenames
+                                     .replace("&", "and"))
     }
 
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
